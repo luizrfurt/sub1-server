@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "4b993340-017a-453a-8381-82d505ad5564",
+		"name": "api Sub1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5766664"
+	},
+	"item": [
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Get all cities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mobile-app",
+								"value": "true",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{accessToken}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrlSub1}}/api/sub1/cities",
+							"host": [
+								"{{baseUrlSub1}}"
+							],
+							"path": [
+								"api",
+								"sub1",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Get all countries",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mobile-app",
+								"value": "true",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{accessToken}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrlSub1}}/api/sub1/countries",
+							"host": [
+								"{{baseUrlSub1}}"
+							],
+							"path": [
+								"api",
+								"sub1",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "States",
+			"item": [
+				{
+					"name": "Get all states",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-mobile-app",
+								"value": "true",
+								"disabled": true
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{accessToken}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrlSub1}}/api/sub1/states",
+							"host": [
+								"{{baseUrlSub1}}"
+							],
+							"path": [
+								"api",
+								"sub1",
+								"states"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
