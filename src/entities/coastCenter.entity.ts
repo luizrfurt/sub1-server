@@ -1,7 +1,7 @@
 import { Entity, Column } from "typeorm";
 import Model from "./model.entity";
 
-@Entity("coastCenters")
+@Entity("coasts_centers")
 export class CoastCenter extends Model {
   @Column()
   code: string;
