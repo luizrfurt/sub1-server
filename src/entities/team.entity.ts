@@ -14,6 +14,9 @@ export class Team extends Model {
   name: string;
 
   @Column()
+  context: number;
+
+  @Column()
   user: number;
 
   toJSON() {

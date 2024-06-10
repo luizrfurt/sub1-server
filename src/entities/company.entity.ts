@@ -11,6 +11,9 @@ export class Company extends Model {
   name: string;
 
   @Column()
+  context: number;
+
+  @Column()
   user: number;
 
   // Referência para tabela de teams
