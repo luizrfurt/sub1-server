@@ -1,5 +1,5 @@
 require("dotenv").config();
-import { CoastCenter } from "../entities/coastCenter.entity";
+import { CostCenter } from "../entities/costCenter.entity";
 import { Company } from "../entities/company.entity";
 import { Job } from "../entities/job.entity";
 import { Shift } from "../entities/shift.entity";
@@ -34,7 +34,6 @@ export const initializeService = async (userId: number) => {
     newShift.user = userId;
     await newShift.save();
 
-
     // Job
     const newJob = new Job();
     newJob.code = "0001";
@@ -42,22 +41,22 @@ export const initializeService = async (userId: number) => {
     newJob.user = userId;
     await newJob.save();
 
+    // Cost-Center
+    const newCostCenter = new CostCenter();
+    newCostCenter.code = "0001";
+    newCostCenter.name = "CENTRO DE CUSTO DEMONSTRAÇÃO";
+    newCostCenter.user = userId;
+    await newCostCenter.save();
 
-    // Coast-Center
-    const newCoastCenter = new CoastCenter();
-    newCoastCenter.code = "0001";
-    newCoastCenter.name = "CENTRO DE CUSTO DEMONSTRAÇÃO";
-    newCoastCenter.user = userId;
-    await newCoastCenter.save();
-
-
-    return [{
-      company: newCompany,
-      team: newTeam,
-      shift: newShift,
-      job: newJob,
-      coastCenter: newCoastCenter,
-    }];
+    return [
+      {
+        company: newCompany,
+        team: newTeam,
+        shift: newShift,
+        job: newJob,
+        costCenter: newCostCenter,
+      },
+    ];
   } catch (err: any) {
     throw new AppError(500, `Erro ao inicializar estruturas: ${err.message}`);
   }

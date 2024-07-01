@@ -1,8 +1,8 @@
 import { Entity, Column } from "typeorm";
 import Model from "./model.entity";
 
-@Entity("coasts_centers")
-export class CoastCenter extends Model {
+@Entity("cost_centers")
+export class CostCenter extends Model {
   @Column()
   code: string;
 
